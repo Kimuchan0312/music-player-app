@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Controller from "./contexts/Controller";
+import { MusicPlayerProvider } from "./contexts/MusicPlayerContext";
+import TrackList from "./contexts/TrackList";
+import { Box, Typography, IconButton } from '@mui/material';  
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MusicPlayerProvider>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '1rem',
+          width: '100%',
+          maxWidth: '500px',
+          marginBottom: '2rem',
+          backgroundColor: '#f8eeef',
+          borderRadius: '30px',
+        }}
+      > <TrackList />  
+        <Controller />
+        </Box>
+    </MusicPlayerProvider>
   );
-}
+};
 
 export default App;
