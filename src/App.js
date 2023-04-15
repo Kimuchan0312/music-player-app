@@ -1,7 +1,7 @@
 import Controller from "./contexts/Controller";
 import { MusicPlayerProvider } from "./contexts/MusicPlayerContext";
 import TrackList from "./contexts/TrackList";
-import { Box, Typography, IconButton } from '@mui/material';  
+import { Box } from '@mui/material';  
 
 const App = () => {
   return (
